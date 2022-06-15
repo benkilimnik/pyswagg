@@ -1,7 +1,7 @@
 from __future__ import absolute_import
 from .primitives.comm import PrimJSONEncoder
 from .utils import final, deref, CaseInsensitiveDict
-from pyswagger import errs
+from pyswagr import errs
 from uuid import uuid4
 import six
 import io, codecs
@@ -292,7 +292,7 @@ class Request(object):
     def header(self):
         """ header of this request, only valid after 'prepare'
 
-        :type: pyswagger.util.CaseInsensitiveDict
+        :type: pyswagr.util.CaseInsensitiveDict
         """
         return self.__header
 
@@ -420,7 +420,7 @@ class Response(object):
 
     def raw_body_only(self, only):
         """ an option to disable parsing bytes-stream to
-        pyswagger primitives of body response. 'True' to enable this option
+        pyswagr primitives of body response. 'True' to enable this option
         """
         self.__raw_body_only = only
 

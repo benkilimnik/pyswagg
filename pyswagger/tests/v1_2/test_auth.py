@@ -1,4 +1,4 @@
-from pyswagger import App, Security
+from pyswagr import App, Security
 from ..utils import get_test_data_folder
 import unittest
 

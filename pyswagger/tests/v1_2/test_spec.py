@@ -1,6 +1,6 @@
-from pyswagger import App
+from pyswagr import App
 from ..utils import get_test_data_folder
-from pyswagger.spec.v1_2.objects import (
+from pyswagr.spec.v1_2.objects import (
     Info,
     Authorization,
     Scope,

@@ -11,7 +11,7 @@ class PatchObject(object):
     """
     - produces/consumes in Operation object should override those in Swagger object.
     - parameters in Operation object should override those in PathItem object.
-    - fulfill Operation.method, which is a pyswagger-only field.
+    - fulfill Operation.method, which is a pyswagr-only field.
     """
 
     class Disp(Dispatcher): pass

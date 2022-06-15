@@ -1,4 +1,4 @@
-from pyswagger import utils, errs
+from pyswagr import utils, errs
 from .utils import is_windows, is_py2
 from datetime import datetime
 import unittest
@@ -118,7 +118,7 @@ class SwaggerUtilsTestCase(unittest.TestCase):
     def test_import_string(self):
         """ test import_string """
         self.assertEqual(utils.import_string('qoo_%^&%&'), None)
-        self.assertNotEqual(utils.import_string('pyswagger'), None)
+        self.assertNotEqual(utils.import_string('pyswagr'), None)
 
     @unittest.skipUnless(not is_windows(), 'make no sense on windows')
     def test_path2url_on_unix(self):

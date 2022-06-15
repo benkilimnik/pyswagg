@@ -13,7 +13,7 @@ class Client(BaseClient):
     def __init__(self, auth=None, send_opt=None):
         """ constructor
 
-        :param auth pyswagger.SwaggerAuth: auth info used when requesting
+        :param auth pyswagr.SwaggerAuth: auth info used when requesting
         :param send_opt dict: options used in requests.send, ex verify=False
         """
         super(Client, self).__init__(auth)

@@ -1,7 +1,7 @@
-from pyswagger import App
-from pyswagger.scan import Scanner, Dispatcher
+from pyswagr import App
+from pyswagr.scan import Scanner, Dispatcher
 from ..utils import get_test_data_folder
-from pyswagger.spec.v1_2.objects import (
+from pyswagr.spec.v1_2.objects import (
     Resource,
     Authorization,
     Operation,

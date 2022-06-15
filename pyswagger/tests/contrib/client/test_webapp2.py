@@ -1,6 +1,6 @@
 from __future__ import absolute_import
-from pyswagger import App
-from pyswagger.contrib.client.webapp2 import Webapp2TestClient
+from pyswagr import App
+from pyswagr.contrib.client.webapp2 import Webapp2TestClient
 from ...utils import create_pet_db, get_test_data_folder, pet_Mary
 from webapp2_extras import sessions
 import unittest
@@ -104,13 +104,13 @@ class CookieHandler(webapp2.RequestHandler):
         return self.session_store.get_session()
 
     def getCookie(self):
-        self.session['test_pyswagger'] = 'test 123'
+        self.session['test_pyswagr'] = 'test 123'
         self.response.status_int = 200
 
     def keepCookie(self):
         global cookie_cache
 
-        cookie_cache = self.session['test_pyswagger']
+        cookie_cache = self.session['test_pyswagr']
         self.response.status_int = 200
 
 

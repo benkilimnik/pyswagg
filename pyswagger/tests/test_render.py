@@ -1,6 +1,6 @@
 from __future__ import absolute_import
-from pyswagger import App
-from pyswagger.primitives import Renderer, File
+from pyswagr import App
+from pyswagr.primitives import Renderer, File
 from .utils import get_test_data_folder
 from ..utils import from_iso8601
 from os import path

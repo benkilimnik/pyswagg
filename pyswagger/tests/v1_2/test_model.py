@@ -1,6 +1,6 @@
-from pyswagger import App
-from pyswagger.contrib.client.requests import Client
-from pyswagger.primitives import Model
+from pyswagr import App
+from pyswagr.contrib.client.requests import Client
+from pyswagr.primitives import Model
 from ..utils import get_test_data_folder
 import unittest
 import httpretty

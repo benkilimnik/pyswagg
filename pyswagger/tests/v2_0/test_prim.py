@@ -1,9 +1,9 @@
-from pyswagger import App, primitives, errs, io
+from pyswagr import App, primitives, errs, io
 from ..utils import get_test_data_folder
-from pyswagger.spec.v2_0 import objects, parser
-from pyswagger.spec import base
-from pyswagger.utils import jp_compose
-from pyswagger.primitives import Primitive
+from pyswagr.spec.v2_0 import objects, parser
+from pyswagr.spec import base
+from pyswagr.utils import jp_compose
+from pyswagr.primitives import Primitive
 import os
 import unittest
 import datetime
@@ -248,7 +248,7 @@ class SchemaTestCase(unittest.TestCase):
     def test_float_dump(self):
         """ failed to dump an object with float property
 
-        refer to issue: https://github.com/mission-liao/pyswagger/issues/92
+        refer to issue: https://github.com/mission-liao/pyswagr/issues/92
         """
         app = App.create(get_test_data_folder(version='2.0', which=os.path.join('schema', 'floatDump')))
         app.dump() # should not raise exception
@@ -498,7 +498,7 @@ class ParameterTestCase(unittest.TestCase):
     def test_collection_format_default(self):
         """ when not defining 'collectFormat', its default should be 'csv'
 
-        refer to issue: https://github.com/mission-liao/pyswagger/issues/101
+        refer to issue: https://github.com/mission-liao/pyswagr/issues/101
         """
         self.app.resolve('#/paths/~1a/get')(p1=['test1', 'test2']) # should not raise exception
 
@@ -518,7 +518,7 @@ class PrimitiveExtensionTestCase(unittest.TestCase):
             return str(val)[:-1]
 
         def str_no_validate(obj, val, ctx):
-            # same as the one used in pyswagger, but no validation
+            # same as the one used in pyswagr, but no validation
             return str(val)
 
         factory.register('encoded_integer', None, decode_int)
@@ -542,7 +542,7 @@ class PrimitiveExtensionTestCase(unittest.TestCase):
         self.assertEqual(v.name, 'M')
 
     def test_overwrite(self):
-        """ overrite type/format handler used in pyswagger """
+        """ overrite type/format handler used in pyswagr """
         m1 = self.app.resolve('#/definitions/m1')
         v = m1._prim_({
             "job":"man"

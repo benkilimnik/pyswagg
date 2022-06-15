@@ -1,7 +1,7 @@
-from pyswagger import App, errs
+from pyswagr import App, errs
 from ..utils import get_test_data_folder
-from pyswagger.primitives import Model, Array
-from pyswagger.io import Request
+from pyswagr.primitives import Model, Array
+from pyswagr.io import Request
 import unittest
 import json
 

@@ -1,4 +1,4 @@
-from pyswagger import App, utils, errs
+from pyswagr import App, utils, errs
 from ..utils import get_test_data_folder
 import unittest
 import os

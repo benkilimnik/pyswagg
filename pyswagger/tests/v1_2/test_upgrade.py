@@ -1,5 +1,5 @@
-from pyswagger import App, errs
-from pyswagger.utils import normalize_url
+from pyswagr import App, errs
+from pyswagr.utils import normalize_url
 from ..utils import get_test_data_folder, is_windows
 from ...spec.v2_0 import objects
 import unittest

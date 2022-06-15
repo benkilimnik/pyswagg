@@ -1,12 +1,12 @@
 ## Operation MIME Support
 Swagger operation may contain more than one MIME type.
-pyswagger allows you to specify consume/produce MIME type when sending request.
+pyswagr allows you to specify consume/produce MIME type when sending request.
 Also, customized MIME codec is supported.
 
 ```python
-from pyswagger import App
-from pyswagger.contrib.client.requests import Client
-from pyswagger.primitives import MimeCodec
+from pyswagr import App
+from pyswagr.contrib.client.requests import Client
+from pyswagr.primitives import MimeCodec
 import xmltodict
 import dicttoxml
 

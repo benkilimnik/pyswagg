@@ -1,7 +1,7 @@
-from pyswagger import App
-from pyswagger.scan import Scanner
-from pyswagger.scanner.v2_0 import YamlFixer
-from pyswagger.spec.v2_0.objects import Operation
+from pyswagr import App
+from pyswagr.scan import Scanner
+from pyswagr.scanner.v2_0 import YamlFixer
+from pyswagr.spec.v2_0.objects import Operation
 from .utils import get_test_data_folder
 import unittest
 

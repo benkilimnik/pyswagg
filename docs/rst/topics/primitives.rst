@@ -4,7 +4,7 @@
 Primitives
 ==========
 
-.. module:: pyswagger.primitives
+.. module:: pyswagr.primitives
 
 .. autoclass:: Byte
     :members:

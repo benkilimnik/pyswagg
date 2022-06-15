@@ -1,9 +1,9 @@
 ### Converting a Document
 
-pyswagger could be used as a forward converter: loading a Swagger document in older version, and dump it into a newer version.
+pyswagr could be used as a forward converter: loading a Swagger document in older version, and dump it into a newer version.
 
 ```python
-from pyswagger import App
+from pyswagr import App
 import json
 import yaml
 # load a document in Swagger 1.2
@@ -54,7 +54,7 @@ Notice that array is used instead of 'allowMultiple'.
 
 ### basePath
 
-Multiple basePath(s) are allowed in Swagger 1.2, however, only one is allowed in Swagger 2.0. If you define different basePath in resource files, pyswagger would raise an Exception and refuse to proceed.
+Multiple basePath(s) are allowed in Swagger 1.2, however, only one is allowed in Swagger 2.0. If you define different basePath in resource files, pyswagr would raise an Exception and refuse to proceed.
 
 ### Migration Guide
 

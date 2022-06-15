@@ -1,5 +1,5 @@
-from pyswagger import App, utils
-from pyswagger.spec.v2_0 import objects
+from pyswagr import App, utils
+from pyswagr.spec.v2_0 import objects
 from ..utils import get_test_data_folder
 from ...utils import final
 import unittest
@@ -75,7 +75,7 @@ class ResolveTestCase(unittest.TestCase):
 
 
 class DerefTestCase(unittest.TestCase):
-    """ test for pyswagger.utils.deref """
+    """ test for pyswagr.utils.deref """
 
     @classmethod
     def setUpClass(kls):

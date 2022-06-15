@@ -1,5 +1,5 @@
 from __future__ import absolute_import
-from pyswagger.primitives import MimeCodec
+from pyswagr.primitives import MimeCodec
 import unittest
 
 

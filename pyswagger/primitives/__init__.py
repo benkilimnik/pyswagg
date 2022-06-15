@@ -151,7 +151,7 @@ class Primitive(object):
     def produce(self, obj, val, ctx=None):
         """ factory function to create primitives
 
-        :param pyswagger.spec.v2_0.objects.Schema obj: spec to construct primitives
+        :param pyswagr.spec.v2_0.objects.Schema obj: spec to construct primitives
         :param val: value to construct primitives
 
         :return: the created primitive

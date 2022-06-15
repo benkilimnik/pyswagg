@@ -238,7 +238,7 @@ class Renderer(object):
         - max_file_length: maximum length of file, in byte
         - minimal_property: only generate 'required' properties
         - minimal_parameter: only generate 'required' parameter
-        - files: registered file object: refer to pyswagger.primitives.File for details
+        - files: registered file object: refer to pyswagr.primitives.File for details
         - object_template: dict of default values assigned for properties when 'name' matched
         - parameter_template: dict of default values assigned for parameters when 'name matched
         - max_property: all properties are generated, ignore 'required'

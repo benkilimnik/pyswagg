@@ -2,7 +2,7 @@
 Main Components
 ===============
 
-*App*, *Security*, *Client* are components you would touch first when adapting pyswagger.
+*App*, *Security*, *Client* are components you would touch first when adapting pyswagr.
 
 App
 ==========
@@ -70,7 +70,7 @@ Below is a code to demostrate the relation between these components.
 Reference
 =========
 
-.. module:: pyswagger.core
+.. module:: pyswagr.core
 .. autoclass:: App
     :members:
     :private-members:
@@ -81,13 +81,13 @@ Reference
     .. automethod:: __init__
     .. automethod:: __call__
 
-.. module:: pyswagger.contrib.client.requests
+.. module:: pyswagr.contrib.client.requests
 .. autoclass:: Client
 
-.. module:: pyswagger.contrib.client.tornado
+.. module:: pyswagr.contrib.client.tornado
 .. autoclass:: TornadoClient
 
-.. module:: pyswagger.io
+.. module:: pyswagr.io
 
 
 .. _Request:

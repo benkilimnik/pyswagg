@@ -1,5 +1,5 @@
-from pyswagger import App
-from pyswagger.errs import CycleDetectionError
+from pyswagr import App
+from pyswagr.errs import CycleDetectionError
 from ..utils import get_test_data_folder
 import unittest
 import os

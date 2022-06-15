@@ -1,8 +1,8 @@
 from __future__ import absolute_import
 from tornado import web, testing
 from tornado.ioloop import IOLoop
-from pyswagger import App
-from pyswagger.contrib.client.tornado import TornadoClient
+from pyswagr import App
+from pyswagr.contrib.client.tornado import TornadoClient
 from ...utils import create_pet_db, get_test_data_folder, pet_Mary
 import json
 import six
@@ -14,7 +14,7 @@ received_file = None
 received_meta = None
 received_headers = None
 
-""" refer to pyswagger.tests.data.v1_2.wordnik for details """
+""" refer to pyswagr.tests.data.v1_2.wordnik for details """
 
 class RESTHandler(web.RequestHandler):
     """ base implementation of RequestHandler,

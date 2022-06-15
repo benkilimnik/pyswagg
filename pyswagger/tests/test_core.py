@@ -1,7 +1,7 @@
-from pyswagger import App, utils
+from pyswagr import App, utils
 from .utils import get_test_data_folder
-from pyswagger.spec.base import BaseObj
-import pyswagger
+from pyswagr.spec.base import BaseObj
+import pyswagr
 import unittest
 import httpretty
 import os
@@ -13,8 +13,8 @@ class SwaggerCoreTestCase(unittest.TestCase):
 
     def test_backward_compatible_v1_2(self):
         """ make sure alias works """
-        self.assertEqual(pyswagger.SwaggerAuth, pyswagger.Security)
-        self.assertEqual(pyswagger.App._create_, pyswagger.App.create)
+        self.assertEqual(pyswagr.SwaggerAuth, pyswagr.Security)
+        self.assertEqual(pyswagr.App._create_, pyswagr.App.create)
 
     @httpretty.activate
     def test_auto_schemes(self):

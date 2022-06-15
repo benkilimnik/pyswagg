@@ -1,6 +1,6 @@
 from __future__ import absolute_import
-from pyswagger import App
-from pyswagger.contrib.client.requests import Client
+from pyswagr import App
+from pyswagr.contrib.client.requests import Client
 from ...utils import get_test_data_folder
 from ....primitives import Model, Array
 import unittest

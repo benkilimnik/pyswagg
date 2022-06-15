@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-from pyswagger import App, io, primitives
+from pyswagr import App, io, primitives
 from ..utils import get_test_data_folder
 import unittest
 import os

@@ -5,10 +5,10 @@ import sys
 def get_test_data_folder(version='1.2', which=''):
     """
     """
-    import pyswagger.tests.data
+    import pyswagr.tests.data
 
     version = 'v' + version.replace('.', '_')
-    folder = os.path.dirname(os.path.abspath(pyswagger.tests.data.__file__))
+    folder = os.path.dirname(os.path.abspath(pyswagr.tests.data.__file__))
     folder = os.path.join(os.path.join(folder, version), which)
     return folder
 

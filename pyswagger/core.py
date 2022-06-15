@@ -9,7 +9,7 @@ from .scan import Scanner
 from .scanner import TypeReduce, CycleDetector
 from .scanner.v1_2 import Upgrade
 from .scanner.v2_0 import AssignParent, Merge, Resolve, PatchObject, YamlFixer, Aggregate, NormalizeRef
-from pyswagger import utils, errs, consts
+from pyswagr import utils, errs, consts
 import copy
 import base64
 import six
@@ -21,7 +21,7 @@ logger = logging.getLogger(__name__)
 
 
 class App(object):
-    """ Major component of pyswagger
+    """ Major component of pyswagr
 
     This object is tended to be used in read-only manner. Therefore,
     all accessible attributes are almost read-only properties.
@@ -39,8 +39,8 @@ class App(object):
         :param url str: url of swagger.json
         :param func url_load_hook: a way to redirect url to a accessible place. for self testing.
         :param sep str: separator used by pyswager.utils.ScopeDict
-        :param prim pyswagger.primitives.Primitive: factory for primitives in Swagger.
-        :param resolver: pyswagger.resolve.Resolver: customized resolver used as default when none is provided when resolving
+        :param prim pyswagr.primitives.Primitive: factory for primitives in Swagger.
+        :param resolver: pyswagr.resolve.Resolver: customized resolver used as default when none is provided when resolving
         """
 
         logger.info('init with url: {0}'.format(url))
@@ -82,7 +82,7 @@ class App(object):
         There is 'Schema' object in swagger 2.0, that's why I change this
         property name from 'schema' to 'root'.
 
-        :type: pyswagger.spec.v2_0.objects.Swagger
+        :type: pyswagr.spec.v2_0.objects.Swagger
         """
         return self.__root
 
@@ -91,7 +91,7 @@ class App(object):
         """ raw objects for original version of loaded resources.
         When loaded json is the latest version we supported, this property is the same as App.root
 
-        :type: ex. when loading Swagger 1.2, the type is pyswagger.spec.v1_2.objects.ResourceList
+        :type: ex. when loading Swagger 1.2, the type is pyswagr.spec.v1_2.objects.ResourceList
         """
         return self.__raw
 
@@ -106,7 +106,7 @@ class App(object):
         - .op['security', 'get_one']
         - .op['get_one']
 
-        :type: pyswagger.utils.ScopeDict of pyswagger.spec.v2_0.objects.Operation
+        :type: pyswagr.utils.ScopeDict of pyswagr.spec.v2_0.objects.Operation
         """
         return self.__op
 
@@ -118,7 +118,7 @@ class App(object):
         ex. a Model:user in Resource:Users, access it by .m['Users', 'user'].
         For Schema object in Swagger 2.0, just access it by it key in json.
 
-        :type: pyswagger.utils.ScopeDict
+        :type: pyswagr.utils.ScopeDict
         """
         return self.__m
 
@@ -148,7 +148,7 @@ class App(object):
     def prim_factory(self):
         """ primitive factory used by this app
 
-        :type: pyswagger.primitives.Primitive
+        :type: pyswagr.primitives.Primitive
         """
         return self.__prim
 
@@ -156,7 +156,7 @@ class App(object):
     def mime_codec(self):
         """ mime codec used by this app
 
-        :type: pyswagger.primitives.MimeCodec
+        :type: pyswagr.primitives.MimeCodec
         """
         return self.__mime_codec
 
@@ -240,7 +240,7 @@ class App(object):
         """
 
         v_mod = utils.import_string('.'.join([
-            'pyswagger',
+            'pyswagr',
             'scanner',
             'v' + self.version.replace('.', '_'),
             'validate'
@@ -265,13 +265,13 @@ class App(object):
         :param getter: customized Getter
         :type getter: sub class/instance of Getter
         :param parser: the parser to parse the loaded json.
-        :type parser: pyswagger.base.Context
+        :type parser: pyswagr.base.Context
         :param dict app_cache: the cache shared by related App
         :param func url_load_hook: hook to patch the url to load json
         :param str sep: scope-separater used in this App
         :param prim pyswager.primitives.Primitive: factory for primitives in Swagger
-        :param mime_codec pyswagger.primitives.MimeCodec: MIME codec
-        :param resolver: pyswagger.resolve.Resolver: customized resolver used as default when none is provided when resolving
+        :param mime_codec pyswagr.primitives.MimeCodec: MIME codec
+        :param resolver: pyswagr.resolve.Resolver: customized resolver used as default when none is provided when resolving
         :return: the created App object
         :rtype: App
         :raises ValueError: if url is wrong
@@ -376,7 +376,7 @@ class App(object):
 
         :param str jref: a JSON Reference, refer to http://tools.ietf.org/html/draft-pbryan-zyp-json-ref-03 for details.
         :param parser: the parser corresponding to target object.
-        :type parser: pyswagger.base.Context
+        :type parser: pyswagr.base.Context
         :return: the referenced object, wrapped by weakref.ProxyType
         :rtype: weakref.ProxyType
         :raises ValueError: if path is not valid
@@ -558,7 +558,7 @@ class BaseClient(object):
     def prepare_schemes(self, req):
         """ make sure this client support schemes required by current request
 
-        :param pyswagger.io.Request req: current request object
+        :param pyswagr.io.Request req: current request object
         """
 
         # fix test bug when in python3 scheme, more details in commint msg
@@ -569,7 +569,7 @@ class BaseClient(object):
         return ret
 
     def compose_headers(self, req, headers=None, opt=None, as_dict=False):
-        """ a utility to compose headers from pyswagger.io.Request and customized headers
+        """ a utility to compose headers from pyswagr.io.Request and customized headers
 
         :return: list of tuple (key, value) when as_dict is False, else dict
         """

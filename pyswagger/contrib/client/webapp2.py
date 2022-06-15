@@ -15,7 +15,7 @@ class Webapp2TestClient(BaseClient):
         """ constructor
 
         :param app webapp2.WSGIApplication: the WSGI application to be tested
-        :param auth pyswagger.Security: auth info holder
+        :param auth pyswagr.Security: auth info holder
         :param keep_cookie bool: keep cookie as session or not
         """
         super(Webapp2TestClient, self).__init__(auth)

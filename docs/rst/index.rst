@@ -1,18 +1,18 @@
-.. pyswagger documentation master file, created by
+.. pyswagr documentation master file, created by
    sphinx-quickstart on Tue Sep  2 20:23:09 2014.
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to pyswagger's documentation!
+Welcome to pyswagr's documentation!
 =====================================
 
-**pyswagger** is a type-safe, dynamic, spec-complaint Swagger client.
+**pyswagr** is a type-safe, dynamic, spec-complaint Swagger client.
 
-- *type-safe*: Instead of manipulating json files as objects directly, we load them and produce our own object set. Every object in `Swagger spec <https://github.com/wordnik/swagger-spec>`_ has a correspondence in pyswagger. During construction of those objects, rules of Swagger Spec would be checked.
-- *dynamic*: Unlike `swagger-codegen <https://github.com/wordnik/swagger-codegen>`_, pyswagger doesn't need preprocessing.
-- *spec-complaint*: pyswagger support Swagger 1.2.
+- *type-safe*: Instead of manipulating json files as objects directly, we load them and produce our own object set. Every object in `Swagger spec <https://github.com/wordnik/swagger-spec>`_ has a correspondence in pyswagr. During construction of those objects, rules of Swagger Spec would be checked.
+- *dynamic*: Unlike `swagger-codegen <https://github.com/wordnik/swagger-codegen>`_, pyswagr doesn't need preprocessing.
+- *spec-complaint*: pyswagr support Swagger 1.2.
 
-The main idea of pyswagger is to provide something easier to use than raw json, and develop things around that.
+The main idea of pyswagr is to provide something easier to use than raw json, and develop things around that.
 
 
 Contents
@@ -30,8 +30,8 @@ Getting Started
 
     .. code-block:: python
 
-        from pyswagger import App, Security
-        from pyswagger.contrib.client.requests import Client
+        from pyswagr import App, Security
+        from pyswagr.contrib.client.requests import Client
 
         # load Swagger resource file into App object
         app = App._create_('http://petstore.swagger.wordnik.com/api/api-docs')
@@ -66,6 +66,6 @@ Getting Started
         client.request(app.op['getPetsByStatus'](status=['available', 'sold'])) # multiple value, wrapped by list.
 
 
-`Source code <https://github.com/mission-liao/pyswagger>`_
-`Report issues <https://github.com/mission-liao/pyswagger/issues>`_
+`Source code <https://github.com/mission-liao/pyswagr>`_
+`Report issues <https://github.com/mission-liao/pyswagr/issues>`_
 

@@ -1,6 +1,6 @@
 from __future__ import absolute_import
-from pyswagger import App
-from pyswagger.contrib.client.flask import FlaskTestClient
+from pyswagr import App
+from pyswagr.contrib.client.flask import FlaskTestClient
 from ...utils import create_pet_db, get_test_data_folder, pet_Mary
 from flask import Flask, json, request
 import unittest

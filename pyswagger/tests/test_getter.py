@@ -1,7 +1,7 @@
-from pyswagger import App
-from pyswagger.getter import UrlGetter, DictGetter, SimpleGetter
-from pyswagger.resolve import Resolver
-from pyswagger.utils import _diff_
+from pyswagr import App
+from pyswagr.getter import UrlGetter, DictGetter, SimpleGetter
+from pyswagr.resolve import Resolver
+from pyswagr.utils import _diff_
 from .utils import get_test_data_folder
 import unittest
 import os

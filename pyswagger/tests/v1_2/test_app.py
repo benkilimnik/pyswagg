@@ -1,6 +1,6 @@
-from pyswagger import App, errs, utils
+from pyswagr import App, errs, utils
 from ..utils import get_test_data_folder
-from pyswagger.spec.v2_0.objects import (
+from pyswagr.spec.v2_0.objects import (
     Schema,
     Operation,
 )

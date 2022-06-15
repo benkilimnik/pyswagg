@@ -82,7 +82,7 @@ class Schema(six.with_metaclass(FieldMeta, BaseSchema)):
     }
 
     __internal_fields__ = {
-        # pyswagger only
+        # pyswagr only
         'ref_obj': None,
         'final': None,
         'name': None,
