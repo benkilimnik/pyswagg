@@ -1,16 +1,16 @@
 from setuptools import setup, find_packages
 
-version = open('pyswagr/__init__.py', 'r').readline().split()[2].strip("'")
+version = open('pyswag/__init__.py', 'r').readline().split()[2].strip("'")
 
 setup(
-    name = 'pyswagr',
+    name = 'pyswag',
     packages = find_packages(exclude=['*.tests.*']),
     version = version,
     description = 'A type-safe, dynamic, spec-compliant swagger client & converter for python',
     author = 'Mission Liao / benkilimnik',
     author_email = 'missionaryliao@gmail.com',
-    url = 'https://github.com/benkilimnik/pyswagr', # use the URL to the github repo
-    download_url = 'https://github.com/benkilimnik/pyswagr/tarball/{0}'.format(version),
+    url = 'https://github.com/benkilimnik/pyswag', # use the URL to the github repo
+    download_url = 'https://github.com/benkilimnik/pyswag/tarball/{0}'.format(version),
     keywords = ['swagger', 'REST'], # arbitrary keywords
     classifiers = [
         'Development Status :: 4 - Beta',

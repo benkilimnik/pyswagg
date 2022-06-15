@@ -1,10 +1,10 @@
 include LICENSE
 include README.md
-recursive-include pyswagr *
+recursive-include pyswag *
 global-exclude *.pyc 
 global-exclude __pycache__/*
 global-exclude *.so
 global-exclude .DS_Store
 global-exclude README.md
-prune pyswagr/tests
+prune pyswag/tests
 

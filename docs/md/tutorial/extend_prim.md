@@ -1,13 +1,13 @@
 ## Make your own primitive creater
 
-In pyswagr, there is a module designed to convert primitives in python to primitives in Swagger.
+In pyswag, there is a module designed to convert primitives in python to primitives in Swagger.
 We already support those primitives defined in Swagger spec, for user-defined primitives, we provide a
 way for users to provide primitives creater.
 
 Here is a simple example for primitive creater:
 ```python
-from pyswagr import App
-from pyswagr.primitives import Primitive
+from pyswag import App
+from pyswag.primitives import Primitive
 
 # define your primitive handler
 def encode_int(obj, val, ctx):
@@ -36,5 +36,5 @@ app = App.load(url, prim=factory)
 ```
 
 There are cases the a primitive-creation needs multipl pass, you will need
-_2nd_pass in those cases. Now it's only used when pyswagr creates Model and Array.
+_2nd_pass in those cases. Now it's only used when pyswag creates Model and Array.
 

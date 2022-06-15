@@ -1,11 +1,11 @@
 Load Spec from a Restricted Service
 =========
 
-For services that are only accessible with some authorization, you'll need to authenticate yourself when loading resource from there. The default getter of pyswagr to load resource is only valid for public service. Refer to this [issue](https://github.com/mission-liao/pyswagr/issues/107) for more details.
+For services that are only accessible with some authorization, you'll need to authenticate yourself when loading resource from there. The default getter of pyswag to load resource is only valid for public service. Refer to this [issue](https://github.com/mission-liao/pyswag/issues/107) for more details.
 
 You can make a CustomGetter by yourself, or provide a callback to SimpleGetter ( a little simpler, :) )
 ```python
-from pyswagr.getter import SimpleGetter
+from pyswag.getter import SimpleGetter
 
 # use any library you like, for example, the beautiful 'requests' library
 import requests

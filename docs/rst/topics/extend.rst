@@ -1,10 +1,10 @@
 .. _extend:
 
 ================
-Extend pyswagr
+Extend pyswag
 ================
 
-This section describes things about extending pyswagr.
+This section describes things about extending pyswag.
 
 .. _extend_client:
 
@@ -13,7 +13,7 @@ A new client implementation
 
 To implement a customized client, you need to aware *BaseClient*
 
-.. module:: pyswagr.core
+.. module:: pyswag.core
 .. autoclass:: BaseClient
     :members:
     :special-members:
