@@ -1,6 +1,8 @@
 pyswagger
 =========
 
+A clone of pyswagger with a couple bug fixes.
+
 [![Build Status](https://travis-ci.org/mission-liao/pyswagger.svg?branch=master)](https://travis-ci.org/mission-liao/pyswagger)
 [![Coverage Status](https://coveralls.io/repos/mission-liao/pyswagger/badge.svg?branch=master&style=flat)](https://coveralls.io/r/mission-liao/pyswagger?branch=master)
 
