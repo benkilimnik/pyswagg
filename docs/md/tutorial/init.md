@@ -1,8 +1,8 @@
 ## Initialization
 
-The first step to use pyswag is creating a pyswag.App object. You need to provide the path of the resource file. For example, a App for petstore can be initialized in this way:
+The first step to use pyswagg is creating a pyswagg.App object. You need to provide the path of the resource file. For example, a App for petstore can be initialized in this way:
 ```python
-from pyswag import App
+from pyswagg import App
 
 # utilize App.create
 app = App.create('http://petstore.swagger.io/v2/swagger.json')
@@ -12,7 +12,7 @@ app = App.create('http://petstore.swagger.io/v2/swagger.json')
 
 The path could be an URI or a absolute path. For example, a path /home/workspace/local/swagger.json could be passed like:
 ```python
-from pyswag import App
+from pyswagg import App
 
 # file URI
 app = App.create('file:///home/workspace/local/swagger.json')

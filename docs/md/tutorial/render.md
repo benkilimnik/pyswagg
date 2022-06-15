@@ -1,11 +1,11 @@
 ## Rendering Random Requests for BlackBox Testing
 
-pyswag could be used to generate random inputs to test your own APIs. Below is an example to demonstrate such use-case. (note: this sample requires [request](https://github.com/kennethreitz/requests) ready on your environment)
+pyswagg could be used to generate random inputs to test your own APIs. Below is an example to demonstrate such use-case. (note: this sample requires [request](https://github.com/kennethreitz/requests) ready on your environment)
 
 ```python
-from pyswag import App
-from pyswag.primitives import Renderer
-from pyswag.contrib.client.requests import Client
+from pyswagg import App
+from pyswagg.primitives import Renderer
+from pyswagg.contrib.client.requests import Client
 
 # create a App with a local resource file
 app = App.create('/path/to/your/resource/file/swagger.json')

@@ -1,10 +1,10 @@
-pyswag
+pyswagg
 =========
 
-A clone of pyswag with a couple bug fixes.
+A clone of pyswagg with a couple bug fixes.
 
-[![Build Status](https://travis-ci.org/mission-liao/pyswag.svg?branch=master)](https://travis-ci.org/mission-liao/pyswag)
-[![Coverage Status](https://coveralls.io/repos/mission-liao/pyswag/badge.svg?branch=master&style=flat)](https://coveralls.io/r/mission-liao/pyswag?branch=master)
+[![Build Status](https://travis-ci.org/mission-liao/pyswagg.svg?branch=master)](https://travis-ci.org/mission-liao/pyswagg)
+[![Coverage Status](https://coveralls.io/repos/mission-liao/pyswagg/badge.svg?branch=master&style=flat)](https://coveralls.io/r/mission-liao/pyswagg?branch=master)
 
 A python client for [Swagger](https://helloreverb.com/developers/swagger) enabled REST API. It wouldn't be easier to
 try Swagger REST API by [Swagger-UI](https://github.com/wordnik/swagger-ui). However, when it's time to **unittest**
@@ -12,7 +12,7 @@ your API, the first option you find would be [Swagger-codegen](https://github.co
 
 This project is developed after [swagger-py](https://github.com/digium/swagger-py), which is a nicely implemented one, and inspired many aspects of this project. Another project is [flex](https://github.com/pipermerriam/flex), which focuses on parameter validation, try it if you can handle other parts by yourselves. For other projects related to Swagger tools in python, check [here](https://github.com/swagger-api/swagger-spec#python).
 
-**pyswag** is much easier to use (compared to swagger-codegen, you don't need to prepare a scala environment) and tries hard to **fully supports** [Swagger Spec](https://helloreverb.com/developers/swagger) in all aspects.
+**pyswagg** is much easier to use (compared to swagger-codegen, you don't need to prepare a scala environment) and tries hard to **fully supports** [Swagger Spec](https://helloreverb.com/developers/swagger) in all aspects.
 
 - [NEWs: upcoming support for OpenAPI 3.0](docs/md/news.md)
 - [Features](README.md#features)
@@ -32,9 +32,9 @@ This project is developed after [swagger-py](https://github.com/digium/swagger-p
 - support Swagger **1.2**, **2.0** on python ~~2.6~~, **2.7**, **3.3**, **3.5**, **3.6**
 - support YAML via [Pretty-YAML](https://github.com/mk-fg/pretty-yaml)
 - support $ref to **External Document**, multiple swagger.json will be organized into a group of App. And external document with self-describing resource is also supported (refer to [issue](https://github.com/swagger-api/swagger-spec/issues/219)).
-- type safe, input/output are converted to python types according to [Data Type](https://github.com/wordnik/swagger-spec/blob/master/versions/1.2.md#43-data-types) described in Swagger. You don't need to touch any json schema when using pyswag. Limitations like **minimum/maximum** or **enum** are also checked. **Model inheritance** also supported.
+- type safe, input/output are converted to python types according to [Data Type](https://github.com/wordnik/swagger-spec/blob/master/versions/1.2.md#43-data-types) described in Swagger. You don't need to touch any json schema when using pyswagg. Limitations like **minimum/maximum** or **enum** are also checked. **Model inheritance** also supported.
 - provide function **App.validate** to check validity of the loaded API definition according to spec.
-- builtin client implementation based on various http clients in python. For usage of these clients, please refer to `pyswag.tests.contrib.client` for details
+- builtin client implementation based on various http clients in python. For usage of these clients, please refer to `pyswagg.tests.contrib.client` for details
   - [requests](https://github.com/kennethreitz/requests)
   - [tornado.httpclient.AsyncHTTPClient](http://tornado.readthedocs.org/en/latest/httpclient.html)
   - [flask.testing.FlaskClient](http://flask.pocoo.org/docs/0.10/api/#flask.testing.FlaskClient)
@@ -72,9 +72,9 @@ This project is developed after [swagger-py](https://github.com/digium/swagger-p
 Before running this script, please make sure [requests](https://github.com/kennethreitz/requests) is installed on your environment.
 
 ```python
-from pyswag import App, Security
-from pyswag.contrib.client.requests import Client
-from pyswag.utils import jp_compose
+from pyswagg import App, Security
+from pyswagg.contrib.client.requests import Client
+from pyswagg.utils import jp_compose
 
 # load Swagger resource file into App object
 app = App._create_('http://petstore.swagger.io/v2/swagger.json')
@@ -113,7 +113,7 @@ assert pet.id == 1
 ## Installation
 We support pip installtion.
 ```bash
-pip install pyswag
+pip install pyswagg
 ```
 
 Additional dependencies must be prepared before firing a request. If you are going to access a remote/local web server, you must install [requests](https://github.com/kennethreitz/requests) first.
@@ -154,12 +154,12 @@ All exported API are described in following sections. ![A diagram about relation
 ## Contribution Guildeline
 
 #### report an issue:
-- issues can be reported [here](https://github.com/mission-liao/pyswag/issues)
+- issues can be reported [here](https://github.com/mission-liao/pyswagg/issues)
 - include swagger.json if possible
 - turn on logging and report with messages on console
 ```python
 import logging
-logger = logging.getLogger('pyswag')
+logger = logging.getLogger('pyswagg')
 
 formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
 
@@ -187,6 +187,6 @@ pip install -r requirement-dev.txt
 
 unit testing
 ```bash
-python -m pytest -s -v --cov=pyswag --cov-config=.coveragerc pyswag/tests
+python -m pytest -s -v --cov=pyswagg --cov-config=.coveragerc pyswagg/tests
 ```
 

@@ -1,4 +1,4 @@
-The initialization of pyswag starts from **App.\_create_(url)**, where **url** could either be a _url_ or a _file_ path. This function returns a App instance, which would be used to initiate Security.
+The initialization of pyswagg starts from **App.\_create_(url)**, where **url** could either be a _url_ or a _file_ path. This function returns a App instance, which would be used to initiate Security.
 
 **App.op** provides a shortcut to access Operation objects, which will produce a set of request/response for SwaggerClient to access API. The way we provide here would help to minimize the possible difference introduced by Swagger2.0 when everything is merged into one file.
 ```python
@@ -10,7 +10,7 @@ App.op['pet',  'getById'] # operationId:'getById', tags:'pet'  (or a pet resourc
 
 # utilize App.resolve to do the same thing
 App.resolve('#/paths/~1pet~1{petId}').get
-# instead of writing JSON-pointers by yourselves, utilize pyswag.utils.jp_compose
+# instead of writing JSON-pointers by yourselves, utilize pyswagg.utils.jp_compose
 App.resolve(utils.jp_compose('/pet/{petId}', base='#/paths')).get
 ```
 **App.validate(strict=True)** provides validation against the loaded Swagger API definition. When passing _strict=True_, an exception would be raised if validation failed. It returns a list of errors in tuple: _(where, type, msg)_.
@@ -23,6 +23,6 @@ This function accepts a [JSON Reference](http://tools.ietf.org/html/draft-pbryan
 ```python
 app.resolve('http://another_site.com/apis/swagger.json#/definitions/User')
 ```
-`pyswag` will load that swagger.json, create a new `App`, and group it with the `App` you kept (**app** in code above). Internally, when `pyswag` encounter some $ref directs to external documents, we just silently handle it in the same way.
+`pyswagg` will load that swagger.json, create a new `App`, and group it with the `App` you kept (**app** in code above). Internally, when `pyswagg` encounter some $ref directs to external documents, we just silently handle it in the same way.
 
 **App.dump()** dumps the root object(Swagger Object in 2.0, ResourceList Object in 1.2) into a dict.

@@ -1,18 +1,18 @@
-.. pyswag documentation master file, created by
+.. pyswagg documentation master file, created by
    sphinx-quickstart on Tue Sep  2 20:23:09 2014.
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to pyswag's documentation!
+Welcome to pyswagg's documentation!
 =====================================
 
-**pyswag** is a type-safe, dynamic, spec-complaint Swagger client.
+**pyswagg** is a type-safe, dynamic, spec-complaint Swagger client.
 
-- *type-safe*: Instead of manipulating json files as objects directly, we load them and produce our own object set. Every object in `Swagger spec <https://github.com/wordnik/swagger-spec>`_ has a correspondence in pyswag. During construction of those objects, rules of Swagger Spec would be checked.
-- *dynamic*: Unlike `swagger-codegen <https://github.com/wordnik/swagger-codegen>`_, pyswag doesn't need preprocessing.
-- *spec-complaint*: pyswag support Swagger 1.2.
+- *type-safe*: Instead of manipulating json files as objects directly, we load them and produce our own object set. Every object in `Swagger spec <https://github.com/wordnik/swagger-spec>`_ has a correspondence in pyswagg. During construction of those objects, rules of Swagger Spec would be checked.
+- *dynamic*: Unlike `swagger-codegen <https://github.com/wordnik/swagger-codegen>`_, pyswagg doesn't need preprocessing.
+- *spec-complaint*: pyswagg support Swagger 1.2.
 
-The main idea of pyswag is to provide something easier to use than raw json, and develop things around that.
+The main idea of pyswagg is to provide something easier to use than raw json, and develop things around that.
 
 
 Contents
@@ -30,8 +30,8 @@ Getting Started
 
     .. code-block:: python
 
-        from pyswag import App, Security
-        from pyswag.contrib.client.requests import Client
+        from pyswagg import App, Security
+        from pyswagg.contrib.client.requests import Client
 
         # load Swagger resource file into App object
         app = App._create_('http://petstore.swagger.wordnik.com/api/api-docs')
@@ -66,6 +66,6 @@ Getting Started
         client.request(app.op['getPetsByStatus'](status=['available', 'sold'])) # multiple value, wrapped by list.
 
 
-`Source code <https://github.com/mission-liao/pyswag>`_
-`Report issues <https://github.com/mission-liao/pyswag/issues>`_
+`Source code <https://github.com/mission-liao/pyswagg>`_
+`Report issues <https://github.com/mission-liao/pyswagg/issues>`_
 

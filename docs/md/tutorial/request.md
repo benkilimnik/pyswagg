@@ -8,7 +8,7 @@ Three parts are involved with making a request:
 ### Access Operation
 There are many ways to access an Operation object. For example, if you want to access 'getUserByName' in petstore.
 ```python
-from pyswag import App
+from pyswagg import App
 
 app = App.create('http://petstore.swagger.io/v2/swagger.json')
 
@@ -19,7 +19,7 @@ op = app.op['user', 'getUserByName'] # tag + operationId
 # via JSON Pointer, every object in Swagger can be referenced via its JSON Pointer.
 # The JSON pointer of Operation 'getUserByName' is '#/paths/~1user~1{username}/get',
 # here we provide a simple way for you to handle JSON pointer.
-from pyswag import utils
+from pyswagg import utils
 # check the place of the Operation 'getUserByName' in petstore
 op = app.resolve(utils.jp_compose(['#', 'paths', '/user/{username}', 'get']))
 
@@ -76,8 +76,8 @@ req_and_resp = op(
 The return value when calling an Operation is a pair of (Request, Response),
 just pass it to 'request' function of client. Below is a full example of 'getUserByName'
 ```python
-from pyswag import App
-from pyswag.contrib.client.requests import Client
+from pyswagg import App
+from pyswagg.contrib.client.requests import Client
 
 app = App.create('/path/to/your/resource/file/swagger.json')
 client = Client()

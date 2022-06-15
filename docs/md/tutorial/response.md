@@ -1,10 +1,10 @@
 ## Access the Response
-The return value of 'request' function of each client implementation is a pyswag.io.Response object.
+The return value of 'request' function of each client implementation is a pyswagg.io.Response object.
 You need to access the result of your request via its interface (note: this sample requires [requests](https://github.com/kennethreitz/requests) ready on your environment)
 
 ```python
-from pyswag import App
-from pyswag.contrib.client.requests import Client
+from pyswagg import App
+from pyswagg.contrib.client.requests import Client
 
 app = App.create('/path/to/your/resource/file/swagger.json')
 client = Client()

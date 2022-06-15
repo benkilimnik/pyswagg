@@ -4,8 +4,8 @@ Sometimes you need to add customized headers that are not listed in OpenAPI spec
 you can get this done in this way:
 
 ```python
-from pyswag import App
-from pyswag.contrib.client.requests import Client
+from pyswagg import App
+from pyswagg.contrib.client.requests import Client
 
 app = App.create('http://petstore.swagger.io/v2/swagger.json')
 client = Client()
